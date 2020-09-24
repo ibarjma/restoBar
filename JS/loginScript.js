@@ -8,14 +8,13 @@ var error_pass_text = document.getElementById('error_pass_text');/*obtengo el te
 /* ==================================================================================================================================================== */
 var selectLogin = document.getElementById('selectLogin');
 
-const expresiones = {
+var expresiones = {
     usuario: /^[a-zA-Z0-9\_]{6,30}$/, // Letras, numeros y guion_bajo
     password: /^[a-zA-Z0-9\_\.\-]{4,20}$/, // 4 a 20 digitos.
-}
+};
 
 formLogin.addEventListener('submit',(e) =>{
     e.preventDefault();
-
     checkInputs();
 });
 
@@ -27,12 +26,15 @@ function checkInputs(){
     if ((nameValue ==='') || (nameValue.length <= 5) || (passwordValue === '') || (!expresiones.usuario.test(nameValue)) || ( passwordValue.length <= 3) || (passwordValue.length > 20) || (!expresiones.password.test(passwordValue))) { /* agregar condicion de caracteres alfanumericos*/
         if (nameValue ==='') {
             setErrorFor(loginName,icon_user_error,error_user_text,'El nombre de usuario no puede estar en blanco');
+            return false;
         }
         else if (nameValue.length <= 5) {
             setErrorFor(loginName,icon_user_error,error_user_text,'El nombre de usuario no puede ser menor a 6 caracteres');
+            return false;
         }
         else if (!expresiones.usuario.test(nameValue)) { //tiene caracteres que no son alfanumericos
             setErrorFor(loginName,icon_user_error,error_user_text,'El nombre de usuario no puede tener caracteres especiales, solo letras , numeros o guion bajo');
+            return false;
         }
         else {
             // limpio los errores que tenia anteriormente
@@ -42,12 +44,15 @@ function checkInputs(){
             
         if (passwordValue === '') {
             setErrorFor(loginPassword,icon_pass_error,error_pass_text,'La contraseña no puede estar en blanco');
+            return false;
         }
         else if (( passwordValue.length <= 3) || (passwordValue.length > 20)) {
             setErrorFor(loginPassword,icon_pass_error,error_pass_text,'La contraseña no puede ser menor a 4 caracteres o mayor a 20');
+            return false;
         }
         else if (!expresiones.password.test(passwordValue)) { //tiene caracteres que no son alfanumericos
             setErrorFor(loginPassword,icon_pass_error,error_pass_text,'La contraseña puede tener caracteres letras , numeros , guiones y algunos caracteres especiales');
+            return false;
         }
         else {
             // limpio los errores que tenia anteriormente
@@ -55,8 +60,8 @@ function checkInputs(){
         }
     } else {
         // ver a que pagina mandar
-        alert("redirigir a la pagina correspondiente");
         redirigir();
+        return true;
     }
 }
 
@@ -76,4 +81,21 @@ function cleanErrors(inputPass,errorIcon, errorText, message){
 
 function redirigir(){
     //hacer el redirigir
+    switch (selectLogin.value) {
+        case "0":
+            location.href = "PAGINAS/mozo.html";
+            break;
+        case "1":
+            location.href = "PAGINAS/cocineros.html";
+            break;
+        case "2":
+            location.href = "PAGINAS/bar-tender.html";    
+            break;
+        case "3":
+            location.href = "PAGINAS/cajero.html";
+            break;    
+        default:
+            alert("Algo salio mal , ningun valor seleccionado corresponde");
+            break;
+    }
 }

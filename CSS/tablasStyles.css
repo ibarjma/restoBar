@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet');
+@import url( 'https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet');
+
+:root{
+    --main-color: linear-gradient(120deg,#2980b9, #8e44ad); /*color de fondo de la pagina*/
+    --background-center: white;/* color de fondo del contenedor del formulario*/
+    --color-muted:#aaaaaa; /* color del texto del placeholder y del borde del input*/
+    --color-primary:#7A43C4; /* color de focus del placeholder, borde del input y color de fondo del boton entrar(submit)*/
+    --color-secondary:#245ED1;
+    --color-tertiary:#5610C9;
+    --color-shadow: rgba(0,0,0,0.6); /* color de la sombra*/ 
+    --main-color2: linear-gradient(120deg, #8e44ad,#2980b9);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ranchers', cursive;
+    background: var(--main-color);
+    height: 100vh;
+    place-items: center;
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.container h1{
+    margin-bottom: 40px;
+    color: white;
+}
+
+.btn_close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+  
+.btn_close:hover{
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+    transform: scale(1.1);
+}
+
+.listContainer{
+    width: 90%;
+    padding: 20px;
+    min-height: 500px;
+    background: var(--main-color2);
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+}
+
+.listContainer table{
+    color: white;
+    border-radius: 8px;
+}
+
+.listContainer table thead ,
+.listContainer table tfoot {
+    background: var(--main-color);
+}
+
+.listContainer table thead th:nth-child(1){   
+    border-radius: 8px 0px 0px 0px;
+}
+
+.listContainer table thead th:last-child{   
+    border-radius: 0px 8px 0px 0px;
+}
+
+.listContainer table thead th{
+    border-top: none;
+}
+
+.listContainer table tfoot th:nth-child(1){
+    border-radius: 0px 0px 0px 8px;
+}
+.listContainer table tfoot th:last-child{   
+    border-radius: 0px 0px 8px 0px;
+}
+
+.listContainer table tfoot th{
+    border-bottom: none;
+    border-top: 2px solid;
+}
+
+.listContainer table tbody tr td {
+    cursor: pointer;
+}
+
+i {
+    cursor: pointer;    
+    padding-left: 50px;
+}
+
+.pagination li a {
+    background: var(--color-primary);;
+    color: white;
+}
+
+.pagination li a:hover{
+    background: var(--color-secondary);
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--color-tertiary);
+    border-color: white;
+}

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet');
+
+:root{
+    --main-color: linear-gradient(120deg,#2980b9, #8e44ad); /*color de fondo de la pagina*/
+    --main-color2: linear-gradient(120deg, #8e44ad , #2980b9); /*color de fondo de la pagina*/
+    --background-center: white;/* color de fondo del contenedor del formulario*/
+    --color-muted:#aaaaaa; /* color del texto del placeholder y del borde del input*/
+    --color-primary:#2691d9; /* color de focus del placeholder, borde del input y color de fondo del boton entrar(submit)*/
+    --color-secondary:#8e44ad;
+	--color-shadow: rgba(0,0,0,.4); /* color de la sombra*/ 
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ranchers', cursive;   
+    background: var(--main-color);
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    background: var(--main-color);
+}
+.container_header{
+    width: 100%;
+    height: 100px;    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    border-bottom: 3px solid;
+    border-image: linear-gradient( to right,transparent, #fff, transparent) 1;
+}
+
+.container_header h1{
+    margin-top: 20px;
+    color: white;
+}
+
+.btn_close{
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+  
+.btn_close:hover{
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+    transform: scale(1.1);
+}
+
+.btn_historico{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn_historico:hover{
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+    transform: scale(1.1);
+}
+
+.accordion{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion_item{
+    width: 45%;
+    background: var(--main-color2);;
+    color: #fff;
+    margin: .5rem .3rem .5rem .3rem;
+    border: 1px solid whitesmoke;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+}
+
+.accordion_item_header{
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion_item_header::after{
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: trasform .5s ease-in-out;
+}
+
+.accordion_item_header.active::after{
+    content: "\2212";    
+}
+
+.accordion_item_header:hover{
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+}
+
+.accordion_item_body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.contenedor_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.contenedor_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.item_list {
+    display: flex;
+    margin-bottom: 5px;
+    width: 45%;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.item_list img {
+    width: 50px;
+    height: 50px;
+}
+
+.accordion_item_body_content{
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 3px solid;
+    border-image: linear-gradient( to right,transparent, #fff, transparent) 1;
+}
+
+.accordion_item_body_content a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #083dff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background: #fff;
+}

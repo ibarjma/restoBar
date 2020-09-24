@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet');
+
+:root{
+    --main-color: linear-gradient(120deg,#2980b9, #8e44ad); /*color de fondo de la pagina*/
+    --main-color2: linear-gradient(120deg, #8e44ad , #2980b9); /*color de fondo de la pagina*/
+    --background-center: white;/* color de fondo del contenedor del formulario*/
+    --color-muted:#aaaaaa; /* color del texto del placeholder y del borde del input*/
+    --color-primary:#2691d9; /* color de focus del placeholder, borde del input y color de fondo del boton entrar(submit)*/
+    --color-secondary:#8e44ad;
+	--color-shadow: rgba(0,0,0,.4); /* color de la sombra*/ 
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ranchers', cursive;   
+    background: var(--main-color);
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.container_header{
+    width: 100%;
+    height: 100px;    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    border-bottom: 3px solid;
+    border-image: linear-gradient( to right,transparent, #fff, transparent) 1;
+}
+
+.container_header h1{
+    margin-top: 20px;
+    color: white;
+}
+
+.btn_return{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn_return:hover{
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+    transform: scale(1.1);
+}
+
+.btn_close{
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn_close:hover{
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+    transform: scale(1.1);
+}
+
+.container_info{
+    width: 85%;
+    height: 590px;
+    margin-top: 15px;
+    background: var(--main-color2);
+    display: flex;
+    align-items: center;    
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0px 10px 15px  var(--color-shadow);
+}
+
+.infoMesa{
+    width: 85%;
+    color: #fff;
+    display: flex;
+}
+
+.consumosMesa{
+    padding-top: 10px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item_list {
+    color: #fff;
+    display: flex;
+    margin-bottom: 10px;
+    width: 45%;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.item_list img {
+    border-radius: 10px 0 0 10px;
+    border-right: 3px solid white ;
+    width: 70px;
+    height: 70px;
+}
+
+.item_list h3{
+    margin-right: 20px;
+}
