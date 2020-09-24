@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<title> MOZO </title>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../CSS/mozoStyles.css">	
+</head>
+<body>
+    <div class="container">
+        <button class="btn_close">Cerrar Sesion</button>
+        <div class="wrapper">
+            <div class="title-text">
+                <div class="title foods">Comidas</div>
+                <div class="title drinks">Bebidas</div>
+            </div>       
+            <div class="form-container">
+                <div class="slide-controls">
+                    <input type="radio" name="slide" id="foods" checked>
+                    <input type="radio" name="slide" id="drinks">
+                    <label for="foods" class="slide foods">Comidas</label>
+                    <label for="drinks" class="slide drinks">Bebidas</label>                
+                    <div class="slider-tab"></div>
+                </div>
+                <select name="" id="" class="field2">
+                    <option value="1">Mesa 1</option>
+                    <option value="1">Mesa 2</option>
+                    <option value="1">Mesa 3</option>
+                    <option value="1">Mesa 4</option>
+                    <option value="1">Mesa 5</option>
+                    <option value="1">Mesa 6</option>
+                    <option value="1">Mesa 7</option>
+                </select>
+                <div class="form-inner">
+                    <form action="#" class="foods">
+                        <div class="field">
+                            <input id="nomFood" type="text" placeholder="Comida" required>
+                        </div>
+                        <div class="field">
+                            <input type="number" placeholder="Cantidad" value="1" maxlength="2" min="1" max="50" required>
+                        </div>        
+                        <div class="field">
+                            
+                            <textarea name="" id="" cols="3" rows="1" placeholder="Descripcion" required></textarea>
+                        </div>              
+                        <div class="field_btn btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Agregar">
+                        </div>
+                    </form>
+                    <form action="#" class="drinks">
+                        <div class="field">
+                            <input id="nomDrink" type="text" placeholder="Bebida" required>
+                        </div>
+                        <div class="field">
+                            <input type="number" placeholder="Cantidad" maxlength="2" value="1" min="1" max="50" required>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Marca" required>
+                        </div>
+                        
+                        <div class="field_btn btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Agregar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="../JS/mozoScript.js"></script>  
+  </body>
+</html>
+
+
+<!-- Un item del menú (comida o bebida) va a tener: nombre, precio, un tipo (bebida o comida) y foto
+Cada pedido va atener un nro de mesa, un item el menu, fecha y hora y el mozo que hizo el pedido -->

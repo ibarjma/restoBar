@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<title> Login </title>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="CSS/loginStyles.css">	
+</head>
+<body>
+    <div class="center">
+        <h1>¡ Bienvenido !</h1>
+        <form method="POST" action="" id="formLogin" class="formLogin">             
+            <div class="txt_field">             
+                <div class="mincontainer">           
+                    <i id="icon_user" class="fas fa-user iconClassNormal" aria-hidden="true"></i>  
+                    <i id="icon_user_error" class="fas fa-times iconClassError" aria-hidden="true"></i>                         
+                    <input class="" type="text" id="loginName" name="loginName" placeholder="Ingrese el nombre de usuario"  minlength="6" maxlength="30"  autocomplete="off"  >  <!-- AVERIGUAR COMO CAMBIAR EL TEXTO PARA QUE AVISE QUE TIENEN QUE SER SOLO CARACTERES ALFA NUMERICOS-->                         
+                </div>                                     
+                <small id="error_user_text" class="text-muted">El nombre de usuario debe tener como minimo 6 caracteres unicamente alfanumericos y guiones</small>
+            </div>                       
+            <div class="txt_field">      
+                <div class="mincontainer">            
+                    <i id="icon_pass" class="fas fa-lock iconClassNormal" aria-hidden="true"></i>                               
+                    <i id="icon_pass_error" class="fas fa-times iconClassError" aria-hidden="true"></i>           
+                    <input class="" type="password" id="loginPassword" name="loginPassword" placeholder="Ingrese la contraseña" maxlength="20" > 
+                </div>   
+                <small id="error_pass_text" class="text-muted error_text">La contraseña puede tener letras , numeros , guiones y algunos caracteres especiales y un minimo de 4 digitos </small>   
+            </div>      
+            <select id="selectLogin">                  
+                <option value="0">mozos</option>
+                <option value="1">cocineros</option>
+                <option value="2">bar-tenders</option>
+                <option value="3">cajeros</option>
+            </select>  
+            <div class="submit_container">      
+                <div class="pass">Olvidaste la contraseña ?</div>
+                <input type="submit" id="submit" value="Entrar">         
+            </div>  
+              
+        </form>
+    </div>	
+    <script src="JS/loginScript.js"></script>      
+</body>
+</html>

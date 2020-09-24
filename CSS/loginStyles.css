@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet');
+@import url( 'https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet');
+
+:root{
+    --main-color: linear-gradient(120deg,#2980b9, #8e44ad); /*color de fondo de la pagina*/
+    --background-center: white;/* color de fondo del contenedor del formulario*/
+    --color-muted:#aaaaaa; /* color del texto del placeholder y del borde del input*/
+    --color-background-button:#2691d9; /* color de focus del placeholder, borde del input y color de fondo del boton entrar(submit)*/
+	--color-shadow: rgba(0,0,0,0.6); /* color de la sombra*/ 
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ranchers', cursive;
+    background: var(--main-color);
+    height: 100vh;
+}
+
+.center{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    overflow: hidden;
+	width: 640px;	
+	min-height: 550px;
+	background: #fff;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 0px 19px 6px var(--color-shadow);
+	-moz-box-shadow: 0px 0px 19px 6px var(--color-shadow);
+    box-shadow: 0px 0px 19px 6px var(--color-shadow);
+    align-items: center;
+}
+
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0 ;
+}
+
+.formLogin{
+	position: relative;
+	width: 640px;
+	height: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;  
+	transition: transform 1.2s ease-in-out;
+}
+
+.formLogin input {
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+	font-size: 16px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+	text-align: center;
+	font-family: 'Nunito', sans-serif;
+}
+
+.center form .txt_field{
+    position: relative;    
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center form .txt_field .mincontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.center form .txt_field .mincontainer i {
+    border: 1px solid var(--color-muted); 
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 18px 20px;
+    margin-right: 5px;
+    color: var(--color-background-button);
+}
+
+.center form .txt_field .mincontainer #icon_user_error, 
+#icon_pass_error{
+    position: absolute;
+    color: white;
+    background-color: rgb(245, 49, 49);
+    padding: 18px 22px;
+}
+
+.center form .txt_field .mincontainer input {
+    width: 100%;
+    padding: 0 5px;
+    height: 60px;
+    background: none;
+    outline: none;   
+    border: 1px solid var(--color-muted);
+    border-radius: 55px;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333333;
+    transition: .5s;    
+}
+
+.center form .txt_field .mincontainer .error_input {
+    border: 2px solid rgb(245, 49, 49);
+}
+
+.center form .txt_field .mincontainer input::placeholder {
+    color: var(--color-muted);
+    font-weight: 500;
+    transition: .5s ease-in-out;    
+}
+
+.center form .txt_field .mincontainer input:focus {
+    border: 2px solid var(--color-background-button);
+    border-radius: 55px;
+    height: 58px;
+}
+
+.center form .txt_field .mincontainer input:focus::placeholder{
+    color: var(--color-background-button);
+    font-style: oblique;
+    font-family: 'Satisfy';
+}
+
+.iconClassNormal{
+    visibility: visible;
+}
+
+.iconClassError{
+    visibility: hidden;
+}
+
+.center form .txt_field .text-muted{
+    color: var(--color-muted);
+    font: 13.33px Ranchers, cursive;
+    margin-top: 18px;
+    align-self: center;
+}
+
+.center form .pass {
+    margin: -5px 0 20px 5px;
+    color: var(--color-muted);
+    cursor: pointer;
+}
+
+.center form .pass:hover{
+    text-decoration:underline;    
+}
+.submit_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.center form .submit_container input[type="submit"]{
+    width: 40%;
+    height: 50px;
+    border: 1px solid;
+    background: var(--color-background-button);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;  
+    margin-bottom: 30px;      
+}
+
+.center form input[type="submit"]:hover {    
+    border: 3px solid #363ed3;
+    transition: .5s;
+}
+
+.error_text {
+    color : rgb(245, 49, 49);
+    font: 13.33px Ranchers, cursive;
+    margin-top: 18px;
+    align-self: center;
+}
+
+/*¯\_(ツ)_/¯*/
