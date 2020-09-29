@@ -15,3 +15,17 @@ drinksLink.onclick = (()=>{
   drinksBtn.click();
   return false;
 });
+
+function mostrarBebidas(){
+  console.log('lasbebidas')
+}
+function popUp(){
+
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+function popUp2(){
+
+  var popup = document.getElementById("myPopup2");
+  popup.classList.toggle("show");
+}

@@ -38,7 +38,14 @@
                 <div class="form-inner">
                     <form action="cajero.html" class="foods">
                         <div class="field">
-                            <input id="nomFood" type="text" placeholder="Comida" required>
+                            <label type="label" class="field3" id="nomFood" onclick="popUp()"> Comidas </button>
+                            <div class="popup" >
+                                <span class="popuptext" id="myPopup">
+                                    <div>
+                                        <p>aca van las comidas</p>
+                                    </div>
+                                </span>
+                            </div>
                         </div>
                         <div class="field">
                             <input type="number" placeholder="Cantidad" value="1" maxlength="2" min="1" max="50" required>
@@ -54,7 +61,14 @@
                     </form>
                     <form action="#" class="drinks">
                         <div class="field">
-                            <input id="nomDrink" type="text" placeholder="Bebida" required>
+                            <label type="label" class="field3" id="nomFood" onclick="popUp2()"> Bebidas </button>
+                                <div class="popup" >
+                                    <span class="popuptext" id="myPopup2">
+                                        <div>
+                                            <p>aca van las bebidas</p>
+                                        </div>
+                                    </span>
+                                </div>
                         </div>
                         <div class="field">
                             <input type="number" placeholder="Cantidad" maxlength="2" value="1" min="1" max="50" required>
